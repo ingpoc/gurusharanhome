@@ -79,10 +79,10 @@ export default function TechStack() {
 
   return (
     <section className="min-h-screen section-light py-24 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Section header */}
         <div className="mb-16">
-          <span className="section-number text-dark/50">03 — How I Build</span>
+          <span className="section-number text-dark/50">02 — How I Build</span>
           <h2 className="font-serif text-3xl md:text-4xl mt-4 text-dark">
             Design Principles
           </h2>

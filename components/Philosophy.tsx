@@ -6,41 +6,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const philosophyItems = [
-  {
-    title: "Single Agent",
-    description: "One capable agent with continuous shared context, not fragmented multi-agents",
-  },
-  {
-    title: "Token Efficient",
-    description: "Progressive disclosure, 98% context savings via code execution in sandbox",
-  },
-  {
-    title: "Deterministic",
-    description: "Code verification over LLM judgment — exit codes, not opinions",
-  },
-  {
-    title: "Self-Improving",
-    description: "Closed learning loop: traces → patterns → skills → better traces",
-  },
-];
-
 export default function Philosophy() {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const cards = cardsRef.current;
-
-    // Animate cards on scroll
     cards.forEach((card, i) => {
       gsap.fromTo(
         card,
-        { opacity: 0, y: 40 },
+        { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 0.6,
           delay: i * 0.1,
           ease: "power2.out",
           scrollTrigger: {
@@ -54,27 +33,95 @@ export default function Philosophy() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="min-h-screen section-light py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section ref={sectionRef} className="min-h-[60vh] section-light py-24 px-6">
+      <div className="max-w-5xl mx-auto">
         {/* Section header */}
-        <div className="mb-16">
+        <div className="mb-12">
           <span className="section-number text-dark/50">01 — Philosophy</span>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-          {philosophyItems.map((item, i) => (
+        {/* Life Influences */}
+        <div className="mb-16">
+          <h3 className="font-mono text-sm text-dark/50 mb-6 uppercase tracking-wider">
+            Life Influences
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div
-              key={item.title}
-              ref={(el) => {
-                if (el) cardsRef.current[i] = el;
-              }}
-              className="p-8 border border-dark/10 rounded-lg card-hover"
+              ref={(el) => { if (el) cardsRef.current[0] = el; }}
             >
-              <h3 className="font-serif text-2xl mb-3">{item.title}</h3>
-              <p className="text-dark/60">{item.description}</p>
+              <h4 className="font-serif text-2xl mb-2">Elon Musk</h4>
+              <p className="text-dark/60 text-sm mb-3 leading-relaxed">
+                Five-step algorithm: Make requirements less dumb, delete and simplify, optimize, accelerate cycle time, automate.
+              </p>
+              <a
+                href="https://www.corporate-rebels.com/blog/musks-algorithm-to-cut-bureaucracy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent text-xs font-mono hover:underline"
+              >
+                Read more ↗
+              </a>
             </div>
-          ))}
+
+            <div
+              ref={(el) => { if (el) cardsRef.current[1] = el; }}
+            >
+              <h4 className="font-serif text-2xl mb-2">Steve Jobs</h4>
+              <p className="text-dark/60 text-sm mb-3 leading-relaxed">
+                Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. Love what you do.
+              </p>
+              <a
+                href="https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent text-xs font-mono hover:underline"
+              >
+                Read more ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Design Influences */}
+        <div>
+          <h3 className="font-mono text-sm text-dark/50 mb-6 uppercase tracking-wider">
+            Design Influences
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              ref={(el) => { if (el) cardsRef.current[2] = el; }}
+            >
+              <h4 className="font-serif text-2xl mb-2">Dieter Rams</h4>
+              <p className="text-dark/60 text-sm mb-3 leading-relaxed">
+                Good design is innovative, useful, aesthetic, understandable, unobtrusive, honest, long-lasting, thorough, environmentally friendly, and involves as little design as possible.
+              </p>
+              <a
+                href="https://bellroy.com/journal/heroes-of-design-dieter-rams"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent text-xs font-mono hover:underline"
+              >
+                Read more ↗
+              </a>
+            </div>
+
+            <div
+              ref={(el) => { if (el) cardsRef.current[3] = el; }}
+            >
+              <h4 className="font-serif text-2xl mb-2">Edward Tufte</h4>
+              <p className="text-dark/60 text-sm mb-3 leading-relaxed">
+                Data-ink ratio, small multiples, layering, and integration. Show comparisons, causality, and multivariate data. Above all, tell the truth.
+              </p>
+              <a
+                href="https://medium.com/@yahiazakaria445/edward-tuftes-6-data-visualization-principles-1193d8b49478"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent text-xs font-mono hover:underline"
+              >
+                Read more ↗
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>

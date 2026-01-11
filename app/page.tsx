@@ -33,9 +33,9 @@ export default function Home() {
       <ProgressBar />
       <Hero />
       <Philosophy />
-      <Projects />
       <TechStack />
       <DesignSystem />
+      <Projects />
       <Connect />
       <Footer />
     </main>

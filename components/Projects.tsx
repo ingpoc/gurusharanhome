@@ -32,12 +32,13 @@ const projects = [
     link: "https://gurusharangupta.netlify.app/agent-harness.html",
   },
   {
-    title: "Ramayana",
-    description: "Interactive Scroll Storytelling",
+    title: "Robo Trader",
+    description: "Autonomous Trading Agent",
     details:
-      "Immersive scroll-based narrative experience combining classical storytelling with modern web interactivity.",
-    tech: ["GSAP", "ScrollTrigger", "SVG", "CSS"],
-    link: "https://gurusharangupta.netlify.app/ramayana.html",
+      "Self-learning trading agent using multi-agent systems to analyze markets and execute strategies autonomously.",
+    tech: ["Python", "Claude", "Pandas", "TradingView"],
+    link: null,
+    comingSoon: true,
   },
 ];
 
@@ -73,21 +74,18 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="mb-16">
-          <span className="section-number text-light/50">02 — Featured Work</span>
+          <span className="section-number text-light/50">04 — Featured Work</span>
         </div>
 
         {/* Projects grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, i) => (
-            <a
+            <div
               key={project.title}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
               ref={(el) => {
                 if (el) cardsRef.current[i] = el as unknown as HTMLDivElement;
               }}
-              className="group block p-8 border border-light/10 rounded-lg card-hover bg-light/5 hover:bg-light/10 transition-colors"
+              className="group p-8 border border-light/10 rounded-lg card-hover bg-light/5 transition-colors"
             >
               <h3 className="font-serif text-3xl mb-2 group-hover:text-accent transition-colors">
                 {project.title}
@@ -104,22 +102,38 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* View link */}
+              {/* View link or Coming Soon */}
               <div className="flex items-center gap-2 text-accent text-sm">
-                <span>View Project</span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="group-hover:translate-x-1 transition-transform"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                {project.comingSoon ? (
+                  <>
+                    <span>Coming Soon</span>
+                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  </>
+                ) : (
+                  <>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 hover:underline"
+                    >
+                      <span>View Project</span>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        className="group-hover:translate-x-1 transition-transform"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </>
+                )}
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

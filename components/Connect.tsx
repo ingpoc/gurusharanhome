@@ -76,10 +76,10 @@ export default function Connect() {
         {/* Email */}
         <p className="text-dark/50">
           <a
-            href="mailto:gurusharan@example.com"
+            href="mailto:gupta.gurusharan@gmail.com"
             className="hover:text-accent transition-colors"
           >
-            gurusharan@example.com
+            gupta.gurusharan@gmail.com
           </a>
         </p>
       </div>

@@ -6,9 +6,9 @@ import gsap from "gsap";
 const codeLines = [
   { type: "comment", text: "// Welcome. Let me show you what I build." },
   { type: "command", text: "$ ls projects/" },
-  { type: "output", text: "aadhaarchain/  xcontent/  agent-harness/  ramayana/" },
-  { type: "command", text: "$ cat philosophy.txt" },
-  { type: "output", text: "→ Single agent. Autonomous. Production-ready." },
+  { type: "output", text: "aadhaarchain/  xcontent/  agent-harness/  robo-trader/" },
+  { type: "command", text: "$ cat agent-harness.md" },
+  { type: "output", text: "→ Single agent. Autonomous. Deterministic. Token-efficient." },
   { type: "success", text: "→ Scroll to explore" },
 ];
 

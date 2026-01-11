@@ -117,7 +117,7 @@ export default function DesignSystem() {
       <div className="max-w-5xl mx-auto">
         {/* Section header */}
         <div className="mb-16">
-          <span className="section-number text-light/50">04 — The System</span>
+          <span className="section-number text-light/50">03 — The System</span>
           <h2 className="font-serif text-3xl md:text-4xl mt-4 text-light">
             design-v3
           </h2>
