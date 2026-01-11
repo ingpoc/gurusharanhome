@@ -37,7 +37,7 @@ const projects = [
     details:
       "Self-learning trading agent using multi-agent systems to analyze markets and execute strategies autonomously.",
     tech: ["Python", "Claude", "Pandas", "TradingView"],
-    link: null,
+    link: undefined,
     comingSoon: true,
   },
 ];
