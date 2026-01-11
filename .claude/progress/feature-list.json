@@ -1,0 +1,122 @@
+{
+  "features": [
+    {
+      "id": "SETUP-001",
+      "description": "Setup Next.js project with Tailwind + GSAP + fonts",
+      "details": "Initialize Next.js 14 (App Router), install Tailwind CSS, GSAP + ScrollTrigger, configure Instrument Serif + Inter fonts",
+      "priority": 1,
+      "status": "implemented",
+      "category": "setup",
+      "files": ["package.json", "tailwind.config.ts", "next.config.js", "app/layout.tsx", "app/globals.css"]
+    },
+    {
+      "id": "EFFECTS-001",
+      "description": "Create CustomCursor + ProgressBar + Spotlight components",
+      "details": "Ring + dot cursor with mix-blend-mode, coral scroll progress bar, radial gradient spotlight following mouse on dark sections",
+      "priority": 1,
+      "status": "implemented",
+      "category": "effects",
+      "files": ["components/CustomCursor.tsx", "components/ProgressBar.tsx"]
+    },
+    {
+      "id": "HERO-001",
+      "description": "Build Hero section with word reveal animation",
+      "details": "Dark section (#141413), GURUSHARAN GUPTA with staggered word-by-word reveal, tagline 'Building Autonomous Systems with Claude Code', scroll indicator",
+      "priority": 1,
+      "status": "implemented",
+      "category": "sections",
+      "files": ["components/Hero.tsx"]
+    },
+    {
+      "id": "PHILOSOPHY-001",
+      "description": "Build Philosophy section with cards",
+      "details": "Light section (#FAF9F5), numbered 01, 4 cards (AI-First, Safety Conscious, Production Grade, Autonomous Systems), italic quote 'Claude Code is my resume'",
+      "priority": 1,
+      "status": "implemented",
+      "category": "sections",
+      "files": ["components/Philosophy.tsx"]
+    },
+    {
+      "id": "PROJECTS-001",
+      "description": "Build Projects section with 4 project cards",
+      "details": "Dark section, numbered 02, cards for AadhaarChain, X Content, Agent Harness, Ramayana with tech tags and live demo links",
+      "priority": 1,
+      "status": "implemented",
+      "category": "sections",
+      "files": ["components/Projects.tsx"],
+      "links": [
+        "https://aadhaarchain.netlify.app/",
+        "https://xcontent.netlify.app/",
+        "https://gurusharangupta.netlify.app/agent-harness.html",
+        "https://gurusharangupta.netlify.app/ramayana.html"
+      ]
+    },
+    {
+      "id": "TECHSTACK-001",
+      "description": "Build TechStack section",
+      "details": "Light section, numbered 03, 5 columns: Frontend, Backend, AI/ML, Blockchain, DevOps",
+      "priority": 2,
+      "status": "implemented",
+      "category": "sections",
+      "files": ["components/TechStack.tsx"]
+    },
+    {
+      "id": "ARCHITECTURE-001",
+      "description": "Build Architecture section with SVG diagram",
+      "details": "Dark section, numbered 04, SVG diagram showing Multi-Agent → Event Driven → Safety Guards with draw-on-scroll animation",
+      "priority": 2,
+      "status": "implemented",
+      "category": "sections",
+      "files": ["components/Architecture.tsx"]
+    },
+    {
+      "id": "CONNECT-001",
+      "description": "Build Connect + Footer sections",
+      "details": "Connect: Light section, numbered 05, GitHub (ingpoc), LinkedIn, Resume PDF download. Footer: Dark section, 'Built with Claude Code'",
+      "priority": 2,
+      "status": "implemented",
+      "category": "sections",
+      "files": ["components/Connect.tsx", "components/Footer.tsx"]
+    },
+    {
+      "id": "ANIMATIONS-001",
+      "description": "Implement GSAP scroll animations",
+      "details": "ScrollTrigger for section reveals, staggered fade-ins, SVG path draw animations, parallax effects",
+      "priority": 2,
+      "status": "implemented",
+      "category": "animations",
+      "files": ["lib/animations.ts"]
+    },
+    {
+      "id": "MOBILE-001",
+      "description": "Mobile responsiveness and touch support",
+      "details": "Disable custom cursor on touch devices, responsive typography with clamp(), single-column layout on mobile",
+      "priority": 2,
+      "status": "implemented",
+      "category": "optimization"
+    },
+    {
+      "id": "DEPLOY-001",
+      "description": "Deploy to Netlify",
+      "details": "Configure netlify.toml, build and deploy, verify all project links work",
+      "priority": 3,
+      "status": "pending",
+      "category": "deployment"
+    }
+  ],
+  "metadata": {
+    "created": "2026-01-11T11:30:00+05:30",
+    "updated": "2026-01-11T12:00:00+05:30",
+    "version": "2.0",
+    "project_name": "hompage",
+    "description": "Personal portfolio homepage with scroll-based storytelling",
+    "design_language": {
+      "dark": "#141413",
+      "light": "#FAF9F5",
+      "accent": "#D97756",
+      "fonts": ["Instrument Serif", "Inter"],
+      "animations": "GSAP + ScrollTrigger"
+    },
+    "plan_reference": "~/.claude/plans/scalable-wandering-crab.md"
+  }
+}
